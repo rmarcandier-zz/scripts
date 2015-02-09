@@ -20,7 +20,7 @@ read IMAGEID
 echo "What is the destination account number? "
 read REC_TENNANT
 
-curl -sX POST $IMGURL/images/$IMAGEID/members/ -H "Content-type: application/json" -H "X-Auth-Token: $TOKEN" -d '{"member": "'$REC_TENNANT'"}'
+curl -sX POST $IMGURL/images/$IMAGEID/members -H "Content-type: application/json" -H "X-Auth-Token: $TOKEN" -d '{"member": "'$REC_TENNANT'"}'
 
 echo -e "Now please provide the credentials for receiving account. \nWhat is the destination account username? "
 read REC_USERNAME
